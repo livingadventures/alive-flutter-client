@@ -1,39 +1,64 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+<!-- TODO: Add badges -->
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
+Alive is a library inspired by [Socket.IO](https://socket.io/) for enabling "real"-time communication on multiple platforms. The current implementation works on Dart/Flutter
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
+> Help me reach more people! Increasing alive community will make the package more stable with your feedback ❤
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+![Like the project](E:\projects\livingadventures\alive-flutter-client\docs\images\likes.png)
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+Current features:
+
+- [x] Message broadcasting
+- [x] Message channels
+
+On road-map:
+
+- [ ] Private channels
+- [ ] Authentication
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Before using the library, be sure you already have a server instance running
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+Connect to server and listen to broadcast messages
 
 ```dart
-const like = 'sample';
+import 'package:alive/alive.dart';
+import 'package:flutter/material.dart';
+
+late Client client;
+
+void main() {
+  client = Client(url: 'ws://localhost:4000/');
+  client.connect();
+  client.on().listen((message) => print(message.data));
+  runApp(const MyApp());
+}
+```
+
+Connect to server and listen to specific channel
+
+```dart
+import 'package:alive/alive.dart';
+import 'package:flutter/material.dart';
+
+late Client client;
+
+void main() {
+  client = Client(url: 'ws://localhost:4000/');
+  client.connect();
+  client.subscribe('test');
+  client.on('test').listen((message) => print(message.data));
+  runApp(const MyApp());
+}
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+No additional information
+
+<!-- TODO: Add additional information -->
