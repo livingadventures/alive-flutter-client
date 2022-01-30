@@ -1,7 +1,4 @@
 library alive;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'package:alive/src/client.dart';
+export 'package:alive/src/message.dart';
