@@ -4,7 +4,7 @@ Alive is a library inspired by [Socket.IO](https://socket.io/) for enabling "rea
 
 > Help me reach more people! Increasing alive community will make the package more stable with your feedback ❤
 
-![Like the project](docs\images\likes.png)
+![Like the project](docs/images/likes.png)
 
 ## Features
 
