@@ -1,6 +1,6 @@
 name: alive
 description: Alive client for flutter. "Real"time communication for apps. You can use it for chats or realtime events
-version: 0.0.1+1
+version: 0.0.1+2
 homepage: https://github.com/livingadventures/alive-flutter-client
 repository: https://github.com/livingadventures/alive-flutter-client
 

@@ -18,6 +18,9 @@ class Client {
       StreamController();
 
   bool _connected = false;
+
+  bool get connected => _connected;
+
   int _retryTimeout = 0;
   final double _retryIncrease = 1.65;
 
