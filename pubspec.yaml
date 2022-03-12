@@ -1,7 +1,7 @@
 name: alive
 description: Alive client for flutter. "Real"time communication for apps. You can use it for chats or realtime events
-version: 0.0.1
-homepage:
+version: 0.0.1+2
+homepage: https://github.com/livingadventures/alive-flutter-client
 repository: https://github.com/livingadventures/alive-flutter-client
 
 environment:
@@ -12,6 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   web_socket_channel: ">=2.1.0 <2.2.0"
+  logging: ">=1.0.2 <1.1.0"
 
 dev_dependencies:
   flutter_test:

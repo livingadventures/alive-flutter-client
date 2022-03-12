@@ -1,6 +1,6 @@
-[![Pub version](https://img.shields.io/pub/v/alive?color=blue)](https://pub.dev/packages/alive) [![Sponsors](https://img.shields.io/badge/sponsor-buy%20me%20a%20coffee-yellow)](https://www.buymeacoffee.com/jonorozcoc) ![Contributors](https://img.shields.io/github/contributors/livingadventures/alive-flutter-client?color=blue) [![Discord](https://img.shields.io/discord/937492655854735360)](https://discord.gg/ZXrJ6zW5)
+[![Pub version](https://img.shields.io/pub/v/alive?color=blue)](https://pub.dev/packages/alive) [![Sponsors](https://img.shields.io/badge/sponsor-buy%20me%20a%20coffee-yellow)](https://www.buymeacoffee.com/jonorozcoc) [![Contributors](https://img.shields.io/github/contributors/livingadventures/alive-flutter-client?color=blue)](https://github.com/livingadventures/alive-flutter-client/graphs/contributors) [![Discord](https://img.shields.io/discord/937492655854735360)](https://discord.gg/ZXrJ6zW5)
 
-Alive is a library inspired by [Socket.IO](https://socket.io/) for enabling "real"-time communication on multiple platforms. The current implementation works on Dart/Flutter
+Alive is a library inspired by [Socket.IO](https://socket.io/) and [Laravel Echo](https://github.com/laravel/echo) for enabling "real"-time communication on multiple platforms. The current implementation works on Dart/Flutter
 
 > Help me reach more people! Increasing alive community will make the package more stable with your feedback ❤
 

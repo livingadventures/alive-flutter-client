@@ -3,10 +3,9 @@ import 'package:flutter/material.dart';
 
 late Client client;
 
-void main() {
+void main() async {
   client = Client(url: 'ws://localhost:4000/');
-  client.connect();
-  client.subscribe('test');
+  client.connect(closeOnError: false);
   runApp(const MyApp());
 }
 
@@ -32,15 +31,38 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  bool _subscribed = false;
+
+  @override
+  void dispose() {
+    client.disconnect();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          if (!_subscribed) {
+            client.subscribe('test');
+          } else {
+            client.unsubscribe('test');
+          }
+          setState(() {
+            _subscribed = !_subscribed;
+          });
+        },
+        child: Icon(
+          _subscribed ? Icons.pause : Icons.play_arrow,
+        ),
+      ),
       body: Center(
         child: StreamBuilder(
-            stream: client.on('test'),
+            stream: client.on(channel: 'test'),
             builder: (BuildContext context, AsyncSnapshot<Message> snapshot) {
               if (snapshot.hasData) {
                 return Column(
